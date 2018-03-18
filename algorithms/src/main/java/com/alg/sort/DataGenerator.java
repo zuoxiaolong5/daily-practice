@@ -8,9 +8,8 @@ import java.util.Random;
 public class DataGenerator {
     public static int[] getIntArray(int length) {
         int [] result = new int[length];
-        Random random = new Random(1000);
-        for (int i = 0 ; i < length; i++) {
-            result[i] = random.nextInt();
+        for (int i = 0; i < length; i++) {
+            result[i] = (int)(Math.random() * 1000);
         }
         return result;
     }
