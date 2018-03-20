@@ -61,13 +61,15 @@ public class QuickSort implements ISort{
             }
         }
         int p = this.partition(data, start, end);
-        quickSort(data, start, p);
+        // 位置 p 的数据一定是最终位置
+        // 所以只需要对 p 之前 和 p 之后的数组重新排序即可
+        quickSort(data, start, p - 1);
         quickSort(data, p + 1, end);
     }
 
     public static void main(String[] args) {
         QuickSort sort = new QuickSort();
-        int[] source = DataGenerator.getIntArray(1);
+        int[] source = DataGenerator.getIntArray(11);
         System.out.println(JSON.toJSONString(source));
         sort.sort(source);
         System.out.println(JSON.toJSONString(source));
