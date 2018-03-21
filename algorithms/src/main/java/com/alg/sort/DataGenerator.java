@@ -1,7 +1,5 @@
 package com.alg.sort;
 
-import java.util.Random;
-
 /**
  * Created by Administrator on 2018/3/18 0018.
  */
