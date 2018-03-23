@@ -6,7 +6,7 @@ package com.alg.sort;
 public interface ISort {
     /**
      * 对整形数组source排序
-     * @param source
+     * @param data
      */
-    void sort(int[] source);
+    void sort(int[] data);
 }

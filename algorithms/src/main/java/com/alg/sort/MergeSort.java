@@ -8,8 +8,8 @@ import com.alibaba.fastjson.JSON;
 public class MergeSort implements ISort{
 
     @Override
-    public void sort(int[] source) {
-        mergeSort(source, 0, source.length - 1);
+    public void sort(int[] data) {
+        mergeSort(data, 0, data.length - 1);
     }
 
     /**

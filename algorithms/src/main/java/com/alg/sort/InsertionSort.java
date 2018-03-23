@@ -8,19 +8,19 @@ import com.alibaba.fastjson.JSON;
 public class InsertionSort implements ISort{
 
     @Override
-    public void sort(int[] source) {
-        for (int i = 1; i < source.length; i++) {
-            int tem = source[i];
+    public void sort(int[] data) {
+        for (int i = 1; i < data.length; i++) {
+            int tem = data[i];
             int j = i - 1;
             // 找到当前元素要插入的位置 -->j
             for (; j >= 0; j--) {
                 // 移动元素
-                if (source[j] > tem) {
-                    source[j + 1] = source[j];
+                if (data[j] > tem) {
+                    data[j + 1] = data[j];
                 } else
                     break;
             }
-            source[j + 1] = tem;
+            data[j + 1] = tem;
         }
     }
 

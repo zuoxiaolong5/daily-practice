@@ -8,8 +8,8 @@ import com.alibaba.fastjson.JSON;
 public class QuickSort implements ISort{
 
     @Override
-    public void sort(int[] source) {
-        this.quickSort(source, 0, source.length - 1);
+    public void sort(int[] data) {
+        this.quickSort(data, 0, data.length - 1);
     }
 
     /**
