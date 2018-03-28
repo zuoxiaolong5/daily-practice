@@ -22,19 +22,21 @@ public class ForceSolve {
                 if (sum >= resultSum) {
                     resultSum = sum;
                     resultStart = i;
-                    resultEnd = j;
+                    resultEnd = j + i;
                 }
             }
         }
         System.out.println("----------------------------------");
-        System.out.println("最大子序列start:" + resultStart + ", end:" + resultEnd + ",sum:" + resultSum);
+        System.out.println("ForceSolve最大子序列start:" + resultStart + ", end:" + resultEnd + ",sum:" + resultSum);
         System.out.println("----------------------------------");
     }
 
     public static void main(String[] args) {
         int[] data = DataGenerator.getIntArray(10, -5, 10);
         System.out.println(JSON.toJSONString(data));
-        ForceSolve solve = new ForceSolve();
-        solve.findMaxSubArray(data);
+        ForceSolve forceSolve = new ForceSolve();
+        forceSolve.findMaxSubArray(data);
+        DivideSolve divideSolve = new DivideSolve();
+        divideSolve.findMaxSubArray(data);
     }
 }
