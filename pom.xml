@@ -10,6 +10,10 @@
     <version>1.0-SNAPSHOT</version>
     <modules>
         <module>algorithms</module>
+        <module>practice-dao</module>
+        <module>practice-common</module>
+        <module>practice-domain</module>
+        <module>practice-web-pc</module>
     </modules>
     <build>
         <pluginManagement>
