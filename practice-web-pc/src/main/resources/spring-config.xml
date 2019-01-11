@@ -10,17 +10,17 @@
        default-lazy-init="false" default-autowire="byName">
 
     <context:annotation-config/>
-    <!--<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
-        <!--<property name="locations">-->
-            <!--<list>-->
-                <!--<value>classpath:common.properties</value>-->
-                <!--<value>classpath:config.properties</value>-->
-            <!--</list>-->
-        <!--</property>-->
-    <!--</bean>-->
-    <!--<context:component-scan base-package="com.daily.practice">-->
-        <!--<context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>-->
-    <!--</context:component-scan>-->
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:common.properties</value>
+                <value>classpath:config.properties</value>
+            </list>
+        </property>
+    </bean>
+    <context:component-scan base-package="com.daily.practice">
+        <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
+    </context:component-scan>
 
-    <!--<import resource="db/spring-jdbc.xml"/>-->
+    <import resource="db/spring-jdbc.xml"/>
 </beans>
